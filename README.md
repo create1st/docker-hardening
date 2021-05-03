@@ -1,2 +1,6 @@
 # docker-hardening
-Hardening public docker image
+This is sample hardening public docker image based on OpenJDK
+
+```shell
+bk run .buildkite/pipeline.yaml
+```
