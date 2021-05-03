@@ -1,0 +1,5 @@
+env:
+  BUILDKITE_CLEAN_CHECKOUT: true
+steps:
+  - label: ':docker: Build'
+    command: '.buildkite/scripts/harden_images.sh'
