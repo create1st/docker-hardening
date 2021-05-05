@@ -1,5 +1,19 @@
 env:
   BUILDKITE_CLEAN_CHECKOUT: true
 steps:
+  - label: ':buildkite: :shell: Scripts validation'
+    plugins:
+      - shellcheck#v1.1.2:
+          files:
+            - .buildkite/hooks/*.sh
+            - .buildkite/scripts/*.sh
+
+  - label: ':buildkite: :shell: Hardening scripts validation'
+    plugins:
+      - shellcheck#v1.1.2:
+          options: "--exclude=SC2114"
+          files:
+            - scripts/*.sh
+
   - label: ':docker: Build'
     command: '.buildkite/scripts/harden_images.sh'
