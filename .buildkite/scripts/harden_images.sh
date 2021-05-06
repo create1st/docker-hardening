@@ -5,5 +5,5 @@ set -uexo pipefail
 for dockerfile in images/Dockerfile.*
 do
 	echo "Hardening: $dockerfile"
-	docker build . -f "$dockerfile" --tag "${dockerfile:18}-hardened"
+	DOCKER_BUILDKIT=0 docker build . -f "$dockerfile" --no-cache --tag "${dockerfile:18}-hardened"
 done
