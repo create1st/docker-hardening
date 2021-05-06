@@ -1,0 +1,11 @@
+/bin/bash
+/bin/csh
+/bin/dash
+/bin/od
+/bin/sh
+/etc/passwd-
+/etc/shadow-
+/usr/bin/od
+/usr/bin/zsh
+/usr/bin/hexdump
+/usr/bin/strings

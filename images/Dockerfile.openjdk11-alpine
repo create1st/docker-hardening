@@ -2,4 +2,4 @@ FROM openjdk:11.0.11-jdk
 
 ADD scripts/* /usr/scripts/
 ADD scripts/compliance/* /usr/scripts/compliance/
-RUN /usr/scripts/debian.sh
+RUN /usr/scripts/alpine.sh
